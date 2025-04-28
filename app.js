@@ -7,6 +7,9 @@ config();
 app.use(json());
 
 app.use('/api/schools', schoolRoutes);
+app.get('/', (req, res) => {
+  res.send('Backend is running 🚀');
+});
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
